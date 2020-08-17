@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+		<style type="text/css">
+
+
+
+.main
+{
+  width: 100%;
+  min-height: 380px;
+
+position: relative;
+  text-align: center;cursor: pointer;
+
+}
+.service
+{
+  background: black;
+  padding: 30px;
+
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+
+}
+.service-logo
+{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+margin: -90px auto 0;
+background: #fff;
+border:18px solid #077bff;
+}
+.service-logo img
+{
+  width: 50px;
+  margin-top: 20px;
+}
+.service h4{
+  height: 35px;
+  width: 80%;
+  background: #fff;
+  margin: 50px auto;
+  position: relative;
+}
+.service h4::after{
+  content: '';
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to-right,#fff,#007bff);
+  position: absolute;
+  right: -5px;
+  top:-5px;
+  z-index: -1;
+}
+.service h4::before{
+  content: '';
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to-right,#007bff,#fff);
+  position: absolute;
+  left: -5px;
+  top:-5px;
+  z-index: -1;
+}
+.shadowOne
+{
+  height: 200px;
+  width: 80%;
+  background: black;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 10%;
+  z-index: -1;
+  box-shadow: 0 0 20px -15px #030380;
+  transition: transform .8s;
+}
+.shadowTwo
+{
+  height: 200px;
+  width: 64%;
+  background: black;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 18%;
+  z-index: -2;
+}
+.main:hover .service
+{
+transform: translateY(-50px);
+}
+.main:hover .shadowOne
+{
+transform: translateY(-50px);
+}
+.main:hover .shadowTwo
+{
+transform: rotate(360deg);
+}
+
+#footer {
+  background: #00428a;
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+}
+
+#footer .footer-top {
+  background: #004a99;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 34px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ecf5ff;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #0067d5;
+  color: #fff;
+}
+
+#footer .footer-top h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 8px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #ecf5ff;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #74b5fc;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+  background: #007bff;
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+  background: #0062cc;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #f1f7ff;
+}
+
+#footer .credits a {
+  color: #bfddfe;
+}
+
+#footer .credits a:hover {
+  color: #f1f7ff;
+}
+</style>
+	<meta charset="UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts1/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style2.css">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+
+ <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- end Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
+    <!-- owl carousel SLIDER -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- end awesome icons -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- lightbox -->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    
+    <!-- Animation Effect CSS -->
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- Main Stylesheet CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="js/html5shiv.js"></script>
+	  <script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+ 
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./index.html" class="site-logo">
+							<img src="images/cropped-Graphic1.jpg" alt="">
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search ">
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-5">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="#">Sign</a> In or <a href="#">Create Account</a>
+							</div>
+							<div class="up-item">
+								
+								
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="#">Home</a></li>
+					
+					<li><a href="#">Workshops</a>
+						<ul class="sub-menu">
+							<li><a href="#">Foss Technologies</a></li>
+							<li><a href="#">Python</a></li>
+							<li><a href="#">Python Framework</a></li>
+							<li><a href="#">Php</a></li>
+							<li><a href="#">CMS:Content Management System</a></li>
+							<li><a href="#">Enterprise Resource Planning</a></li>
+							<li><a href="#">LATEX</a></li>
+						</ul>
+					</li>
+<li><a href="#">Recent Workshops</a></li>
+
+					<li><a href="#">Internships</a>
+						<ul class="sub-menu">
+							<li><a href="./product.html">June2017-June2017</a></li>
+							<li><a href="./category.html">June2017-May2018</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section end -->
+
+
+
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="images/IMG_0329.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="hs-item set-bg" data-setbg="images/la.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 text-white">
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="slide-num-holder" id="snh-1"></div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+
+
+	<!-- Features section -->
+	<section id="about" class="about-wrapper">
+<!-- <h1 style="text-align: center;padding-top: 50px; font-size: 50px;color: black"><b><i>ABOUT US</i></b></h1>
+<p style="text-align: center; font-size: 20px">Foslipy follows the Principle of FOSS Sofware's</p><br>
+<div class="row-mb-5">
+	<div class="col-lg-6 col-md-6 col-12">
+<p style="color: black"><b>Foslipy gives services to Educational Institute and Engineering Colleges.<br> 
+We conduct workshop for Students and Faculties on Open Source Technologies. <br>
+We have transformed Educational Institute from Proprietary Software to Open Source(Linux) Software's.<br> 
+We have trained around 2000 Students and 100 Faculties on Open Source Technologies. <br>
+We provide services on :- Learning Management System(LMS-Moodle), Lab Migration, School and College Management ERP Services Centre of Excellence Labs to the Educational Institute.</b> </p>
+	</div>
+ -->
+  
+
+<div class="container">
+                    <div data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
+                        <h2 style="padding-top: 30px"><b>About Us</b></h2>
+                        <p style="font-color:black">Foslipy follows the Principle of FOSS Software's</p>
+                        <hr>
+                    </div>
+                    
+                    <div class="row-mb-5">
+	<div class="col-lg-6 col-md-6  col-xs-12">
+<p style="color: black ; font-size:17px;padding-top: 5%">Foslipy gives services to Educational Institute and Engineering Colleges.<br> 
+We conduct workshop for Students and Faculties on Open Source Technologies. <br>
+We have transformed Educational Institute from Proprietary Software to Open Source(Linux) Software's.<br> 
+We have trained around 2000 Students and 100 Faculties on Open Source Technologies.
+We provide services on :- Learning Management System(LMS-Moodle), Lab Migration, School and College Management ERP Services Centre of Excellence Labs to the Educational Institute. </p>
+	</div>
+        	<div class="col-lg-6 col-md-6 col-xs-12">
+            	<div class="widget">
+                	<h3>OUR <span>POWERFUL</span> SKILLS!</h3>
+                    <div id="skills" class="skills_bar">
+                        <small>FOSS</small>
+                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            <span class="skill_count">100%</span>
+                            </div>
+                        </div><!-- end progress -->
+                        <small>LMS</small>
+                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            <span class="skill_count">100%</span>
+                            </div>
+                        </div><!-- end progress -->
+                        <small>ERP</small>
+                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            <span class="skill_count">100%</span>
+                            </div>
+                        </div><!-- end progress -->
+                        <small>LAB MIGRATION</small>
+                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                            <span class="skill_count">100%</span>
+                            </div>
+                        </div><!-- end progress -->
+                       
+                </div><!-- end widget -->
+            </div><!-- end col-lg-6 -->
+		</div><!-- end container -->
+    </div>
+</div>
+</div>
+ 
+
+	</section>
+
+<!-- 
+	<section id="about" class="about-wrapper">
+		
+<div class="container">
+                    <div data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
+                        <h2 style="padding-top: 30px"><b>Features</b></h2>
+                        
+                        <hr>
+                    </div>
+                    
+
+	</section> -->
+
+	<!-- letest product section -->
+	
+ <div class="site-section bg-light block-13">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="font-weight-bold text-black">Meet Our Team</h2>
+          </div>
+        </div>
+        <div class="nonloop-block-13 owl-carousel">
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="images/person_1.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="">
+              <h3 class="font-weight-light h5">Megan Smith</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="images/person_2.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="">
+              <h3 class="font-weight-light h5">Brooke Cagle</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="images/person_3.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="">
+              <h3 class="font-weight-light h5">Philip Martin</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="images/person_4.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="">
+              <h3 class="font-weight-light h5">Steven Ericson</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="images/person_5.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="">
+              <h3 class="font-weight-light h5">Nathan Dumlao</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="images/person_6.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="">
+              <h3 class="font-weight-light h5">Brook Smith</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-light block-13">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="font-weight-bold text-black">Services</h2>
+          </div>
+        </div>
+<br><br>
+        <div class="container">
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="main">
+          <div class="service">
+            <div class="service-logo">
+              <img src="images/OIP.jpg">
+            </div>
+            <h4>app design</h4>
+            <p>Freedom matters! (freedom to create, share, invent, collaborate, learn and modify).
+             Google, Intel, IBM, NASA, etc etc list goes on highly based on Free and Open Source Technologies. </p>
+          </div>
+          <div class="shadowOne"></div>
+          <div class="shadowTwo"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        
+        <div class="main">
+          <div class="service">
+            <div class="service-logo">
+              <img src="images/OIP.jpg">
+            </div>
+            <h4>app design</h4>
+            <p>Freedom matters! (freedom to create, share, invent, collaborate, learn and modify).
+             Google, Intel, IBM, NASA, etc etc list goes on highly based on Free and Open Source Technologies. </p>
+          </div>
+          <div class="shadowOne"></div>
+          <div class="shadowTwo"></div>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+   <br><br><br>
+	<!-- Footer section -->
+	<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h3>Foslipy</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit"  value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </footer><!-- #footer
+		
+	<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/jquery.zoom.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+ <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+
+ 
+
+  <script src="js/main.js"></script>
+	</body>
+</html>
